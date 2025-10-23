@@ -66,5 +66,16 @@ def main():
 
     print("🔍 Scrapeando proxies...")
     sc = scraping(txt)
-    total_guardados = guardar("Proxy.txt", sc)
+
+    # Eliminar duplicados
+    sc_unicos = list(set(sc))
+
+
+
+    # Si prefieres ordenar por puerto, descomenta esta línea y comenta la anterior
+    # sc_ordenados = sorted(sc_unicos, key=lambda x: int(x.split(":")[1]))
+
+    total_guardados = guardar("Proxy.txt", sc_unicos)
+     print(f"✅ Scraping finalizado [{len(sc)} → {total_guardados} únicos ordenados] proxies")
+
     print(f"✅ Scraping finalizado [{len(sc)}] proxies")
