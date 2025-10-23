@@ -64,7 +64,17 @@ async def peticiones(proxy, sem, barra, clasificados, tipos_a_probar):
 # Iterar sobre proxies
 async def iterar(lista_proxies, tipos_a_probar):
     sem = asyncio.Semaphore(800)
-    barra = tqdm.tqdm(total=len(lista_proxies) * len(tipos_a_probar), desc="Validando")
+    
+    # 🌟 CAMBIO CLAVE APLICADO AQUÍ con bar_format 🌟
+    # El formato ahora es: {l_bar}{bar}| {n_fmt}/{total_fmt} {postfix}
+    # Esto elimina el tiempo transcurrido, tiempo restante y velocidad (la parte [00:05<00:00, 60.1B/s])
+    bar_format_personalizado = '{l_bar}{bar}| {n_fmt}/{total_fmt} {postfix}'
+    barra = tqdm.tqdm(
+        total=len(lista_proxies) * len(tipos_a_probar),
+        desc="Validando",
+        bar_format=bar_format_personalizado
+    )
+    
     clasificados = {tipo: [] for tipo in tipos_a_probar}
     tasks = [peticiones(proxy, sem, barra, clasificados, tipos_a_probar) for proxy in lista_proxies]
     await asyncio.gather(*tasks)
@@ -119,3 +129,5 @@ def start():
     for tipo, proxies in clasificados.items():
         print(f"{tipo.upper()} válidos: {len(proxies)}")
 
+# Ejemplo de cómo se vería la barra después del cambio:
+# Validando: 100%|██████████| 167118/167118 HTTP=300, SOCKS5=100
