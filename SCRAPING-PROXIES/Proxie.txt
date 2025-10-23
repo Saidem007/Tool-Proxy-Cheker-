@@ -1,0 +1,13 @@
+https://raw.githubusercontent.com/fyvri/fresh-proxy-list/archive/storage/classic/socks5.txt
+https://raw.githubusercontent.com/fyvri/fresh-proxy-list/archive/storage/classic/socks4.txt
+https://raw.githubusercontent.com/LoneKingCode/free-proxy-db/refs/heads/main/proxies/all.txt
+https://raw.githubusercontent.com/proxifly/free-proxy-list/refs/heads/main/proxies/all/data.txt
+https://raw.githubusercontent.com/a2u/free-proxy-list/master/free-proxy-list.txt
+https://raw.githubusercontent.com/ProxyScraper/ProxyScraper/refs/heads/main/http.txt
+https://raw.githubusercontent.com/ProxyScraper/ProxyScraper/refs/heads/main/socks4.txt
+https://raw.githubusercontent.com/ProxyScraper/ProxyScraper/refs/heads/main/socks5.txt
+https://raw.githubusercontent.com/hendrikbgr/Free-Proxy-Repo/refs/heads/master/proxy_list.txt
+https://raw.githubusercontent.com/dpangestuw/Free-Proxy/refs/heads/main/All_proxies.txt
+https://raw.githubusercontent.com/yemixzy/proxy-list/refs/heads/main/proxies/unchecked.txt
+https://raw.githubusercontent.com/andigwandi/free-proxy/refs/heads/main/proxy_list.txt
+https://raw.githubusercontent.com/officialputuid/KangProxy/refs/heads/KangProxy/xResults/Proxies.txt
